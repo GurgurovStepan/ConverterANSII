@@ -33,8 +33,7 @@ namespace ConverterANSII
                 CodeANSII.Text = "";
             else
             {
-                MyConverter.SetNumberString(Numbers.Text);  // Задать строку (числовую)
-                var Li = MyConverter.GetNumberDigits();     // Получить список разрядов числа
+                var Li = MyConverter.SetNumberString(Numbers.Text);  // Задать строку (числовую)
 
                 CodeANSII.Text = "";
                 foreach (var item in Li)

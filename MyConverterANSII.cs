@@ -68,20 +68,13 @@ namespace ConverterANSII
         }
        
         /// <summary>
-        /// Получает входную строку
+        /// Получает строку, содежащую целое число и конвертирует разряды числа в коды ANSII 
         /// </summary>
         /// <param name="number">Входная строка</param>
-        public void SetNumberString(string number)
+        public List<byte> SetNumberString(string number)
         {
            SplitNumber(ConversionString(number));
-        }
 
-        /// <summary>
-        /// Возвращает список, содержащий разряды числа в кодах ANSII
-        /// </summary>
-        /// <returns></returns>
-        public List<byte> GetNumberDigits() 
-        {
             var sizeList = numbers.Count;
 
             for (int i = 0; i < sizeList; i++)
