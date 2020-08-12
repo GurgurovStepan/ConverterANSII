@@ -57,13 +57,19 @@ namespace ConverterANSII
             byte temp;
             numbers.Clear();
 
+            if (number==0) 
+            {
+                numbers.Add(0);
+            }
+            else
+{
             while (number > 0)
             {
                 temp = (byte)(number % 10);
                 numbers.Add(temp);
                 number /= 10;
             }
-
+}
             numbers.Reverse();
         }
        
